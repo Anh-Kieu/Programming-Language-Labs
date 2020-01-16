@@ -1,0 +1,87 @@
+Anh Kieu
+Bash Lab, csci208
+
+Problem 2:
+[aqk001@dana213-lnx-11 BashA]$ pwd
+/nfs/unixspace/linux/accounts/student/a/aqk001/csci208/lab/BashA
+
+Problem 3:
+Part 1: student
+Part 2: the date in ls -l command is when last modified
+
+Problem 4:
+lab
+
+Problem 5:
+Part 1: [aqk001@dana213-lnx-11 BashA]$ cp handin.txt handincopy.txt
+Part 2: [aqk001@dana213-lnx-11 ~]$ cp csci208/test.txt test2.txt
+Part 3: [aqk001@dana213-lnx-11 ~]$ cp csci208/test.txt .
+Part 4: [aqk001@dana213-lnx-11 csci208]$ cp test.txt ~/.
+Part 5: [aqk001@dana213-lnx-11 csci208]$ cp test.txt ../.
+
+Problem 6:
+Part 1: [aqk001@dana213-lnx-11 ~]$ rm test2.txt
+rm: remove regular file ‘test2.txt’? y
+
+Part 2:[aqk001@dana213-lnx-11 ~]$ rm -rf gradecopy
+
+Problem 7:
+Part 1: [aqk001@dana213-lnx-11 ~]$ mv test.txt testrename.txt
+Part 2: [aqk001@dana213-lnx-11 ~]$ mv testrename.txt ~/Documents/test.txt
+
+Problem 8:
+Part 1:
+ 1043  mv testrename.txt ~/Documents/test.txt
+ 1044  ls Documents/
+ 1045  history
+ 1046  11042
+ 1047  ls
+ 1048  history
+
+Part 2: [aqk001@dana213-lnx-11 ~]$ !c
+
+Problem 9
+Part 1: drwx--x--x
+Part 2: -rw------- 
+Part 3: drwx--x--x
+Part 4: --wxrwx--x
+
+Problem 10:
+Part 1:
+[aqk001@dana213-lnx-11 Bash Shell Language (A)]$ chmod u-rw Alpha
+[aqk001@dana213-lnx-11 Bash Shell Language (A)]$ chmod g+r Alpha
+[aqk001@dana213-lnx-11 Bash Shell Language (A)]$ chmod o+w Alpha
+
+Part 2:
+No, you don't have the permission
+
+Part 3:
+Yes, they can
+
+Problem 11:
+5 differences
+1. Change
+2. Add
+3. Change
+4. Change
+5. Change
+
+Problem 12:
+diff example1.txt example2.txt > diffs
+ls >> diffs
+
+Problem 13:
+cat example1.txt example2.txt > more.txt
+
+Problem 14:
+Part 1: alias print='a2ps'
+Part 2: rm = remove files or folders
+Part 3: GNU project C and C++ compiler
+
+Problem 15:
+tar -cjvf csci204.tbz csci204
+
+
+
+
+
