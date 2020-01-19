@@ -2,7 +2,7 @@
 Name: Anh Kieu
 CSCI 208
 Prof. Wittie
-Homework 1 - Iterative
+Homework 2 - Iterative
 '''
 
 '''
