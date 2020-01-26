@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# if there is 4 args
+if [[ ${#} == 4 ]]; then
+	command=$1
+	argSet=$2
+	fileExt=$3
+	outputFolder=$4
+	# folder/file not exist
+	if [[ ! -e $outputFolder ]]; then
+		echo Create folder...
+		mkdir $outputFolder
+		exit
+	fi
+	# not a directory
+	if [[ ! -d $outputFolder ]]; then
+		echo Not a directory
+		exit
+	else
+		# handle inputs
+		answer=`python pythonfile.py ${argSet}`
+		# loop through all the text file
+		for file in ${outputFolder}/*.${fileExt}; do	
+			for perm in ${answer}; do
+				${command} ${perm} ${file##*/} >> "${file}"
+				# get the file base name code from : https://stackoverflow.com/questions/2664740/extract-file-basename-without-path-and-extension-in-bash
+			done
+		done
+	fi
+else	
+	# not enough or too many args
+	echo Invalid number of arguments
+	exit
+fi
