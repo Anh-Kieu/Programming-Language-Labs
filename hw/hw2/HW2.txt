@@ -1,0 +1,22 @@
+Anh Kieu
+CSCI 208 - 11 am
+Prof. Wittie
+----------------
+
+1. Formal type
+- int i;	i: int
+- int arr[];	arr: NULL + Ref(int -> int)
+- enum Color{Green, Red, Brown, Yellow};
+	Color = Green + Red + Brown + Yellow
+- class Leaf {
+	Color color;
+	int numOfVeins;
+	}
+	Leaf = Color * int
+- class MapleTree {
+	float heightInFeet;
+	Leaf[] leaves;
+	}
+	MapleTree = float * (NULL + Ref(int -> (NULL + Ref(Leaf))))
+
+2. Java supports enum and array.
