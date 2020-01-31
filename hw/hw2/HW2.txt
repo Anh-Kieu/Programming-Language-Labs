@@ -20,3 +20,33 @@ Prof. Wittie
 	MapleTree = float * (NULL + Ref(int -> (NULL + Ref(Leaf))))
 
 2. Java supports enum and array.
+- enum:
+	- Create: enum Food { SOMETHING, SOMETHINGELSE, WOW };
+	- Assign: Food f = Food.SOMETHING;
+	- Enum does support equality, aka you can do f == Food.SOMETHING but can't support < operation. Only valid when called on comparable things (like ordinal)
+	- Can't cast enum to something else like integer.
+	- Enum in Java supports ordinal, syntax: f.ordinal(), ordinal starts at 0, and in the order of the enum listed. Ordinal is fixed and contiguous
+	- Enum in Java supports assign value/attribute but you have to declare it in the constructor (i.e public Food(float price) { this.price = price }). 
+	- There can be multiple attributes.
+	- You can add function(s) to enum in Java.
+
+- array: (normal array not arraylist)
+	- (type)[] : i.e int[] arr; (to create arr of type int[]) int[] arr = new int[size]; (for initialization)
+	- Not resizable. The size is fixed with initialization.
+	- Only have one type.
+	- Use int as index
+	- Start from 0
+	- Can't add function to the mapping
+	- There are some built-in functions (actually attributes) like length
+	- Can make multiple dim array
+
+- cartesian product (basically a class in java)
+	- Example of creation in the code
+	- There can be many components
+	- There has to be a name for a class
+	- Access by name
+	- Function can be added
+
+- Java builtin does not support union. The only close thing should be class inheritance (?), but then it is not really union type.
+
+3. 
