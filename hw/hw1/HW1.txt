@@ -1,0 +1,25 @@
+3. What is one advantage of a compiler (over an interpreter)? 
+Compiled programs run faster, especially when they are compiled into a directly executable form on the underlying hardware. 
+ 
+4. What is one advantage of an interpreter (over a compiler)?  
+Interpreted programs tend to be more portable, which means it can run the program on different machines or platforms as they are high-level source code or virtual machine code. 
+ 
+5. What is Just-In-Time compilation good for?  
+JIT is used to have the benefits of both static compilation and interpretation. It stands as a balanced approach that has running time benefit of native code 
+while still keeping the program relatively small (benefit from interpreted code). 
+ 
+6. Explain the tradeoff between space and time for compiled/JIT-compiled/Interpreted languages.  
+For compiled languages, the program is translated to native code (code that is directly executable by the machine it is running on). Thus, native code 
+is faster. However, since it is at low-level, it will take more space to “describe” what it is doing to the machine. On the other hand, 
+since interpreted code is high-level, interpreted code is more concise, hence, takes less space. However, since it is not native, which means the machine has 
+to run the code through a given interpreter or virtual machine, it is slower than native code. JIT-compiled is supposed to mediate these tradeoffs between space 
+and time by using different methods such as mixed code (mixing native code and interpreted code) or throw-away code (part of a program could be compiled dynamically if needed).  
+ 
+7. Summarize the benefits of JIT compilation for Java.  
+As early JVM (Java Virtual Machine) was all interpreters, the running speed was not optimized. Noticing that “interpretation proper only accounted for 68% of execution time” 
+(in one of their experiments), they decided to use JVM bytecode as an intermediate representation for JIT compilation and optimization. Then they looked for other optimization 
+techniques that brought a balance between speed of algorithm execution and speed of the resulting code. Java now can be run on different machines while still having a relatively 
+fast speed. 
+ 
+8. What is a concurrent JIT compiler?  
+Concurrent JIT compiler can operate as the program is executing in a separate thread or process or even processor. 
