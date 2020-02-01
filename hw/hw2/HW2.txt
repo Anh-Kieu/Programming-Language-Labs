@@ -12,7 +12,8 @@ Prof. Wittie
 	Color color;
 	int numOfVeins;
 	}
-	Leaf = Color * int
+	Leaf = (NULL + Ref(Color)) * int
+- Leaf leaf;	leaf: NULL + Ref(Leaf)
 - class MapleTree {
 	float heightInFeet;
 	Leaf[] leaves;
@@ -49,4 +50,24 @@ Prof. Wittie
 
 - Java builtin does not support union. The only close thing should be class inheritance (?), but then it is not really union type.
 
-3. 
+3. Enum in python:
+- Create:
+from enum import Enum, auto
+
+class Fruit(Enum):
+    ORANGE = auto()
+    BANANA = auto()
+    BLUEBERRY = auto()
+
+- When declaring the enum, we have to specify the hidden value of the enum, even when we want to set the value to be auto.
+- There are options to make the enum value distinctive (can't be repeated) (add decorator @unique)
+- There are no order in enum. In other words, enum in python does not have ordinal values.
+- There are still equality comparision.
+- There can be built-in function.
+- Enum in Python can be iterated.
+
+
+
+
+
+
