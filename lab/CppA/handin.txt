@@ -1,0 +1,14 @@
+Anh Kieu
+CSCI 208 - 11am
+Prof. Wittie
+Lab CppA
+
+Problem 8:
+1. Types are explicitly declared.
+i.e int x = 3;
+
+2. vector
+
+3. Still statically typed.
+i.e int x = 4;
+    x = "Yo"; --> Error, can't change type, invalid conversion
