@@ -1,0 +1,9 @@
+Problem 3:
+Java uses dynamic method binding as the method being called is from the ref to the object not from the type of the variable. Assessed at runtime.
+
+Problem 5:
+a. Type in Language. Statically typed and dynamically typed language.
+b. Statically typed: Type checking is performed during compile-time, variable has a specific type that can't be changed.
+Dynamically typed: Type checking is performed at run-time, variable does not have a type, only values
+c. Foozle uses dynamic typing
+d. Banana uses static typing
