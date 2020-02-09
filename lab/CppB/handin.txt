@@ -1,0 +1,31 @@
+Formal type:
+
+# java:
+Pb2 = int * str * bool
+obj1 : NULL + Ref(Pb2)
+obj2 : NULL + Ref(obj1)
+
+# C++
+Pb2 = int * str * bool
+obj1 : NULL + Ref(Pb2)
+obj2 : NULL + Ref(Pb2)
+
+Problem 6:
+C++ uses name equivalence. Example:
+typedef struct {
+  int x;
+  double y;
+} hello;
+typedef struct {
+  int x;
+  double y;
+} hi;
+
+int main() {
+  hello x;
+  hi y = x;
+  return 0;
+}
+
+will produce an error: conversion from ‘hello’ to non-scalar type ‘hi’ requested
+even though they have the same structure.
