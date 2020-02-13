@@ -1,0 +1,75 @@
+1. double a = 4;
+infer a double
+infer 4 int
+equiv left dbl right int -> no
+coerce int to dlb -> yes
+SUCCESS
+
+2. int b = 9 + 4 * 6;
+infer b int
+infer 9 int
+infer 4 int
+infer 6 int
+check *: int -> int -> int
+equiv input int para int -> yes
+equiv input int para int -> yes
+infer * returns int
+check +: int -> int -> int
+equiv input int para int -> yes
+equiv input int para int -> yes
+infer + returns int
+equiv left int right int -> yes
+SUCCESS
+
+3. 3 + 4.5 + "hi";
+infer 3 int
+infer 4.5 dbl
+infer "hi" str
+check + int -> int -> int
+equiv input int para int -> yes
+equiv input dbl para int -> no
+coerce dbl to int -> no
+check + dbl -> dbl -> dbl
+equiv input int para dbl -> no
+coerce int to dbl -> yes
+equiv input dbl par dbl -> yes
+infer + returns dbl
+check + int -> int -> int
+equiv input dbl para int -> no
+check + dbl -> dbl -> dbl
+equiv input dbl para dbl -> yes
+equiv input str para dbl -> no
+coerce str to dbl -> no
+check + str -> str -> str
+equiv input dbl para str -> no
+coerce dbl to str -> yes
+equiv input str para str -> yes
+infer + returns str
+SUCCESS
+
+4. int x = 3.4;
+infer x int
+infer 3.4 dbl
+equiv left int right dbl -> no
+coerce dbl to int -> no
+FAIL
+
+5. Type checking is good for catching the code at compile-time and avoid unexpected type error.
+
+6. Bjarne Stroustrup is the creator and developer of C++. He has got the expertise to be a valid source of information.
+
+7. Page 49: "The use of a static type system improves code quality by reducing the number of errors and moves checking to compile time."
+
+8. Page 50: Linked list takes more memory to store the pointers, actually tripled that of array type. Linked list memory allocation is also dynamic (heap, free store) memory instead of being continuous like array. Thus, we have to randomly access memory locations which causes a lot of cache misses.
+
+9. Page 53: No. "Writing code without serious use of user-defined types leads to hard-to-comprehend, verbose results (which is a characteristic of low-level language)". The author showed how he used a type system to improve the runtime of his linear algebra library.
+
+10. Page 53: "Run time typing carries heavy costs: objects are larger because they must carry type information, resolving types at runtime implies extra computation is inhibited because interfaces must be able to handle objects of every type, if only to give an error message."
+
+11. Duck typing: An object's behavior is determined by the value it holds.
+>>> x = 9
+>>> type(x)
+<class 'int'>
+>>> x = 9.0
+>>> type(x)
+<class 'float'>
