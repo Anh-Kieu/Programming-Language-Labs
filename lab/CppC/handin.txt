@@ -1,0 +1,3 @@
+1. C++ uses static method binding
+2. Java uses dynamic method binding
+3. After add virtual, C++ uses dynamic method binding. 
