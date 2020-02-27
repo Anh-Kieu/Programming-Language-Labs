@@ -12,7 +12,8 @@ parent(coolDad, me).
 parent(dopeMom, me).
 parent(coolDad, coolBrother).
 parent(dopeMom, coolBrother).
-parent(coolUncle, someDankCousin).
+parent(coolGrandfather, coolUncle).
+parent(dopeGrandma, coolUncle).
 parent(dopeAunt, someDankCousin).
 parent(coolGrandfather, coolDad).
 parent(dopeGrandma, coolDad).
