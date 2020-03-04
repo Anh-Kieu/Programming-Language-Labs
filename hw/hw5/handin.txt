@@ -1,0 +1,9 @@
+Problem 2:
+  produce creates value on the heap. Consume only reassigns the pointer but never free the memory on the heap
+  => Memory leak\
+
+Problem 3:
+Dangling Reference
+
+Problem 4:
+The free returns the node that the head and the tail are pointing to to the heap manager. However, head and tail are not NULL. This causes Dangling Reference.

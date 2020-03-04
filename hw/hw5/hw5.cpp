@@ -49,18 +49,21 @@ void Fifo::consume(int v){
   for (Node * temp = tail; temp != NULL; temp = tail) {
     if (temp->previous == NULL){
       if (temp->x <= v){
+        delete(head);
 	tail = NULL;
 	head = NULL;
 	return;
       }else{ /* temp->x > v */
 	temp->x -= v;
 	/****************** Point1 *******************/
+  free(temp);
 	return;
       }
     }else{
       if (temp->x < v){
 	v -= temp->x;
 	tail = temp->previous;
+  delete(tail->next);
 	tail->next = NULL;
       }else{
 	if(temp->x == v){
@@ -71,7 +74,7 @@ void Fifo::consume(int v){
 	  temp->x -= v;
 	  return;
 	}
-      } 
+      }
     }
   }
 }
@@ -86,15 +89,20 @@ void printl(Fifo l){
 int main() {
   Fifo l;
 
-  l.produce(7); printl(l);
-  l.consume(2); printl(l);
-  l.produce(3); printl(l);
-  l.consume(4); printl(l);
-  l.produce(2); printl(l);
-  l.consume(3); printl(l);
-  l.produce(18); printl(l);
-  l.consume(3); printl(l);
-  l.produce(6); printl(l);
-  l.consume(30); printl(l);
+  // l.produce(7); printl(l);
+  // l.consume(2); printl(l);
+  // l.produce(3); printl(l);
+  // l.consume(4); printl(l);
+  // l.produce(2); printl(l);
+  // l.consume(3); printl(l);
+  // l.produce(18); printl(l);
+  // l.consume(3); printl(l);
+  // l.produce(6); printl(l);
+  // l.consume(30); printl(l);
+  l.produce(5);
+  l.consume(4);
+  l.produce(7);
+  cout << l.head << endl;
+  // printl(l);
 
 }

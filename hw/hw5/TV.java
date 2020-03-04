@@ -6,5 +6,11 @@ public class TV {
      public String toString() {
 	return "W " + width + " H " + height;
     }
-   
+
+    public TV() {}
+
+    public TV(TV t) {
+         this.width = t.width;
+         this.height = t.height;
+    }
 }

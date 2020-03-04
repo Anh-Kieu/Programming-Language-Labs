@@ -5,4 +5,12 @@ public class Sofa {
     public String toString() {
 	return color + " colored";
     }
+
+    public Sofa() {
+
+    }
+
+    public Sofa(Sofa s) {
+        this.color = s.color;
+    }
 }

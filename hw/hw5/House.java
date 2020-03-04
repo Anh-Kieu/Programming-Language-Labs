@@ -11,12 +11,18 @@ public class House {
     public House() {}
 
     public House(House h) {
-    	this.doors = h.doors;
+    	this.doors = new Door[h.doors.length];
+    	for (int i = 0; i < h.doors.length; i++) {
+    		this.doors[i] = new Door(h.doors[i]);
+		}
     	this.owner = h.owner;
-    	this.mySofa = h.mySofa;
-    	this.phoneBook = h.phoneBook;
+    	this.mySofa = new Sofa(h.mySofa);
+    	this.phoneBook = new int[h.phoneBook.length];
+    	for (int i = 0; i < h.phoneBook.length; i++) {
+    		this.phoneBook[i] = h.phoneBook[i];
+		}
     	this.myPhoneNum = h.myPhoneNum;
-    	this.myTV = h.myTV;
+    	this.myTV = new TV(h.myTV);
 	}
 
     public String toString() {
