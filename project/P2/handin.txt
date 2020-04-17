@@ -1,0 +1,11 @@
+Go is imperative:
+- Go is designed based on C/C++
+- Good for general purpose programming, concurrency
+- Has return
+- Has function declare
+- Has variables
+
+Go is not object-oriented:
+- Has no object, instead has struct
+- No inheritance
+- No overloading or polymorphism
