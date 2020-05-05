@@ -15,11 +15,15 @@ func main() {
 	//z = 12
 	//fmt.Println(z)
 
+	//var u int = 3
+	//var s float32 = 4
+	//s = u
+	//fmt.Println(s)
+
 	var a float32
 	a = 12
 	fmt.Println(a)
-
-	//b := "Hello"
-	//z := a + b
-	//fmt.Println(z)
+	b := "Hello"
+	z := a + b
+	fmt.Println(z)
 }

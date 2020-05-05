@@ -5,6 +5,6 @@ import "fmt"
 func main() {
 	var x int
 	x = 12
-	//x := "hello"
+	x = "hello"
 	fmt.Println(x)
 }
